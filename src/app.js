@@ -55,7 +55,7 @@ app.get('/weather', (req,res) => {
                 error: "Unable to find the location"
             })
         }
-        forecast(latitude, longitude, (error, {weather_description,temp,feelslike}={}) => {            
+        forecast(latitude, longitude, (error, {weather_description,temp,feelslike,humidity}={}) => {            
             if(error){
                 return res.send({
                     error: "Unable to find the lati long"
@@ -65,7 +65,8 @@ app.get('/weather', (req,res) => {
                 location,
                 weather_description,
                 temp,
-                feelslike
+                feelslike,
+                humidity
             })  
         })
     })

@@ -12,6 +12,7 @@ const messageOne = document.querySelector('#message-1')
 const messageTwo = document.querySelector('#message-2')
 const messageThree = document.querySelector('#message-3')
 const messageFour = document.querySelector('#message-4')
+const messageFive = document.querySelector('#message-5')
 const img = document.querySelector('img')
 
 weatherForm.addEventListener('submit',(e) => {
@@ -23,6 +24,7 @@ weatherForm.addEventListener('submit',(e) => {
     messageTwo.textContent =""
     messageThree.textContent =""
     messageFour.textContent =""
+    messageFive.textContent =""
 
     fetch('/weather?address='+location).then((response) =>
     {
@@ -38,7 +40,8 @@ weatherForm.addEventListener('submit',(e) => {
                 messageOne.textContent="Location: " + data.location
                 messageTwo.textContent="Weather Description: " + data.weather_description
                 messageThree.textContent="Temperature  :" + data.temp
-                messageFour.textContent="It feels like : " + data.feelslike
+                messageFour.textContent="It feels like : " + data.feelslike 
+                messageFive.textContent= "Humidity: " + data.humidity
                 // console.log(data.location)
                 // console.log(data.weather_description)
             }
