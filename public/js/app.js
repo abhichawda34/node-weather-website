@@ -41,7 +41,7 @@ weatherForm.addEventListener('submit',(e) => {
                 messageTwo.textContent="Weather Description: " + data.weather_description
                 messageThree.textContent="Temperature  :" + data.temp
                 messageFour.textContent="It feels like : " + data.feelslike 
-                messageFive.textContent= "Humidity: " + data.humidity
+                messageFive.textContent= "Humidity: " + data.humidit
                 // console.log(data.location)
                 // console.log(data.weather_description)
             }
